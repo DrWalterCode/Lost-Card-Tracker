@@ -83,9 +83,39 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property locate() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("locate", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property logo() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("logo", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property output_Ps1ChL() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("output_Ps1ChL", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property phasing_out_slips_slider2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("phasing_out_slips_slider2", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

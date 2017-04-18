@@ -51,10 +51,32 @@
     <Reference Include="DevExpress.Utils.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Google.Protobuf, Version=3.0.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.0.0\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=7.0.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.7.0.7-m61\lib\net451\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySqlBackup, Version=2.0.9.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlBackup.NET.2.0.9.5\lib\net45\MySqlBackup.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -76,11 +98,47 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="frmIssued.Designer.vb">
+      <DependentUpon>frmIssued.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIssued.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmCards.Designer.vb">
+      <DependentUpon>frmCards.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCards.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDatabaseSetup.designer.vb">
+      <DependentUpon>FrmDatabaseSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDatabaseSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmin.Designer.vb">
+      <DependentUpon>frmAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmreportss.Designer.vb">
+      <DependentUpon>frmreportss.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmreportss.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomePage.Designer.vb">
+      <DependentUpon>frmHomePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -100,9 +158,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="frmIssued.resx">
+      <DependentUpon>frmIssued.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCards.resx">
+      <DependentUpon>frmCards.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDatabaseSetup.resx">
+      <DependentUpon>FrmDatabaseSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmreportss.resx">
+      <DependentUpon>frmreportss.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHomePage.resx">
+      <DependentUpon>frmHomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -121,6 +198,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Capture.PNG" />
@@ -130,6 +208,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\output_Ps1ChL.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locate.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phasing_out_slips_slider2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
